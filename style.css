@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Proxima Regular';
+    src: url('./fonts/Proxima/proximanova_regular.ttf');
+}
+
+@font-face {
+    font-family: 'Circular Med';
+    src: url('./fonts/Circular/CircularStd-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Circular Bold';
+    src: url('./fonts/Circular/CircularStd-Bold.ttf');
+}
+
+
+:root {
+    --pink-color: #F78CB6;
+    --dark-grey: #56597A;
+    --grey: #AAAAAB;
+}
+
+
+.prox {
+    font-family: 'Proxima Regular';
+}
+.circ-mid {
+    font-family: 'Circular Med';
+}
+.circ-bold {
+    font-family: 'Circular Bold';
+}
+
+body {
+    margin: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+
+.wripper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
