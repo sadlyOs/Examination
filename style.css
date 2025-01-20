@@ -24,6 +24,9 @@
 .pink {
     color: var(--pink-color);
 }
+.gray {
+    color: var(--grey);
+}
 
 .prox {
     font-family: 'Proxima Regular';
@@ -37,6 +40,7 @@
 
 body {
     margin: 0;
+    color: var(--dark-grey);
 }
 
 
@@ -56,6 +60,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    gap: 129px;
 }
 
 /*------------HEADER------------*/
@@ -67,7 +72,7 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
 }
 .header__logo-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 .menu-list {
     margin: 0;
@@ -89,6 +94,66 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+/*------------MAIN------------*/
+
+/*------------COL1------------*/
+.col1__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .left-content__header span {
+    display: block;
+}
+.left-content__header span::before {
+    display: block;
+    width: 36px;
+    height: 3px;
+    background: var(--pink-color);
+} */
+.col1__left {
+    flex: 1 1 100px;
+}
+.col1__left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+.left-content__main {
+    font-size: 1.5rem;
+}
+.left-content__header span{
+    font-size: clamp(1.8rem, 1.725rem + 0.38vw, 2rem);
+}
+.left-content__other {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 2rem;
+}
+.left-content__header {
+    font-size: 1.3rem;
+}
+.btn {
+    position: relative;
+    color: #ffffffff;
+    text-decoration: none;
+    padding: 18px 85px 18px 22px;
+    background: var(--pink-color);
+}
+.btn::after {
+    position: absolute;
+    display: inline-block;
+    width: 43px;
+    height: 32px;
+    left: 0;
+    top: 0;
+    background: url('./images/btn-img.png');
+}
+.col1__right {
+    flex: 1 1 100px;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 992px) {
     .container {
         max-width: 720px;
@@ -96,6 +161,13 @@ h1, h2, h3, h4, h5, h6, p {
 
     .menu-list {
         gap: 40px;
+    }
+
+    .col1__right {
+        order: 1;
+    }
+    .col1__left {
+        order: 2;
     }
 }
 
@@ -110,5 +182,27 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .menu-list {
         display: none;
+    }
+    
+    .left-content__main {
+        font-size: clamp(1rem, 0.643rem + 1.79vw, 1.5rem);
+    }
+}
+
+
+@media screen and (max-width: 567px) {
+    .container {
+        max-width: 100%;
+    }
+    .col1__container {
+        flex-direction: column;
+    }
+
+    .col1__left-content {
+        text-align: center;
+    }
+
+    .col1__right img{
+        width: 100%;
     }
 }
