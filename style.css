@@ -94,6 +94,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /*------------MAIN------------*/
 .main {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     gap: 194px;
@@ -263,17 +264,50 @@ h1, h2, h3, h4, h5, h6, p {
 .col4__left {
     text-align: center;
 }
-.col4__bottom-name {
-    font-size: 1.5rem;
-    margin-top: 60px;
-    margin-bottom: 10px;
-}
 .col4__right-other {
     width: 80%;
 }
 .col4__right-main {
     margin: 20px 0 30px 0;
 }
+.col4__bottom-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.col4__bottom-name {
+    font-size: 1.5rem;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+.col4__bottom-right {
+    display: flex;
+}
+.rot-right {
+    transform: rotate(-180deg);
+    margin-left: 10px;
+}
+
+
+
+.vis-left, .vis-right {
+    transition: .3s;
+    display: none;
+}
+.left:hover, .right:hover {
+    display: none;
+}
+.left:hover ~ .vis-left {
+    display: block;
+    transform: scale(1.5);
+}
+
+.right:hover ~ .vis-right {
+    display: block;
+    transform: scale(1.5) rotate(-180deg);
+    margin-left: 10px;
+}
+
 
 @media screen and (max-width: 992px) {
     .container {
@@ -354,4 +388,11 @@ h1, h2, h3, h4, h5, h6, p {
     .col4__right-other {
         width: 100%;
     }
+    .col4__bottom-right {
+        display: none;
+    }
+    .col4__bottom-text {
+        justify-content: center;
+    }
+    
 }
