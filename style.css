@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .col1__left {
     flex: 1 1 100px;
+    animation: col1-text 2s alternate;
 }
 .col1__left-content {
     display: flex;
@@ -168,6 +169,29 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center;
 }
 
+.col1__right-image {
+    animation: col1-image 2s ease;
+}
+
+@keyframes col1-image {
+    0% {
+        transform: translate(300px);
+    }
+
+    100% {
+        visibility: translate(0);
+    }
+}
+
+@keyframes col1-text {
+    0% {
+        transform: translate(-300px);
+    }
+
+    100% {
+        visibility: translate(0);
+    }
+}
 
 /*------------COL2------------*/
 .col2__container {
@@ -471,6 +495,11 @@ h1, h2, h3, h4, h5, h6, p {
     .container {
         max-width: 100%;
     }
+
+    .btn:hover {
+        background: var(--pink-color);
+    }
+
     .col1__container {
         flex-direction: column;
     }
