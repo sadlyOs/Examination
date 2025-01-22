@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: space-between;
     align-items: center;
 }
-.header__logo-text {
+.logo-text {
     font-size: 1.3rem;
 }
 .menu-list {
@@ -287,9 +287,6 @@ h1, h2, h3, h4, h5, h6, p {
     transform: rotate(-180deg);
     margin-left: 10px;
 }
-
-
-
 .vis-left, .vis-right {
     transition: .3s;
     display: none;
@@ -308,6 +305,66 @@ h1, h2, h3, h4, h5, h6, p {
     margin-left: 10px;
 }
 
+/*------------FOOTER------------*/
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+.social__header {
+    font-size: 1.1rem;
+    color: #919299;
+}
+.social__icons {
+    display: flex;
+    gap: 11px;
+    margin-top: 16px;
+}
+.social-icon {
+    padding: 8px 8px 0 8px;
+    box-shadow: 7px 3px 8px 0px rgba(34, 60, 80, 0.11);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .3s; 
+}
+.social-icon > img:last-child {
+    display: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.3); 
+}
+.social-icon.social-instagram:hover > img:first-child{ 
+    display: none;
+}
+.social-icon.social-instagram:hover > img:last-child{
+    display: block; 
+}
+
+.social-icon.social-twitter:hover > img:first-child{ 
+    display: none;
+}
+.social-icon.social-twitter:hover > img:last-child{
+    display: block; 
+}
+
+.social-icon.social-youtube:hover > img:first-child{ 
+    display: none;
+}
+.social-icon.social-youtube:hover > img:last-child{
+    display: block; 
+}
+
+.social-icon.social-facebook:hover > img:first-child{ 
+    display: none;
+}
+.social-icon.social-facebook:hover > img:last-child{
+    display: block; 
+}
 
 @media screen and (max-width: 992px) {
     .container {
