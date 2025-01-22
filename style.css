@@ -366,6 +366,28 @@ h1, h2, h3, h4, h5, h6, p {
     display: block; 
 }
 
+.footer__container-menu {
+    display: flex;
+    gap: 167px;
+}
+.footer__menu-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer__menu-list a {
+    text-decoration: none;
+    transition: .3s;
+}
+.footer__menu-list a:hover {
+    color: var(--dark-grey);
+}
+
 @media screen and (max-width: 992px) {
     .container {
         max-width: 720px;
